@@ -1,0 +1,12 @@
+2020-12-25 21:17:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENT" not found; SQL statement:
+insert into student (id, email, first_name, last_name) values (null, ?, ?, ?) [42102-196]
+2020-12-25 21:17:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENT" not found; SQL statement:
+insert into student (id, email, first_name, last_name) values (null, ?, ?, ?) [42102-196]
+2020-12-25 21:18:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENT" not found; SQL statement:
+insert into student (id, email, first_name, last_name) values (null, ?, ?, ?) [42102-196]
+2020-12-25 21:18:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENT" not found; SQL statement:
+insert into student (id, email, first_name, last_name) values (null, ?, ?, ?) [42102-196]

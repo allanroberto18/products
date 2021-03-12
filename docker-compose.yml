@@ -1,0 +1,23 @@
+version: '3.0'
+services:
+  rabbitmq-management:
+    image: library/rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  db:
+    image: mariadb
+    ports:
+      - 9306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: products_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: dev
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8000:8080

@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: Products Queu Service
+
+  datasource:
+    url: jdbc:mariadb://localhost:9306/products_db
+    username: user
+    password: dev
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1MB
+      max-request-size: 1MB
+
+  rabbitmq:
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 6
+          max-interval: 10s
+          multiplier: 2
+
+application:
+  rabbitmq:
+    exchange: app-exchange
+    queueName: products-processor
+    routingkey: com.alr.products
+
+server:
+  servlet:
+    context-path: /api
